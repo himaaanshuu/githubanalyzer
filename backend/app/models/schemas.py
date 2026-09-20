@@ -124,6 +124,13 @@ class AnalysisLevelResponse(BaseModel):
     dependency_graph: str = ""
     complexity: str = ""
     security: str = ""
+    api_surface: str = ""
+    entry_points: list[str] = []
+    call_graph_summary: str = ""
+    coupling_analysis: str = ""
+    dead_code_candidates: str = ""
+    security_observations: str = ""
+    circular_dependencies: str = ""
 
 
 class QuestionRequest(BaseModel):

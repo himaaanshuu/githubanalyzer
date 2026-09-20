@@ -76,14 +76,18 @@ function getSectionsForLevel(level: string, data: AnalysisLevel) {
     return [
       { id: 'arch', title: 'Architecture', content: data.architecture },
       { id: 'modules', title: 'Modules', content: data.modules },
+      { id: 'api', title: 'API Surface', content: data.api_surface },
       { id: 'flow', title: 'Data Flow', content: data.data_flow },
       { id: 'deps', title: 'Dependencies', content: data.dependencies },
+      { id: 'important', title: 'Important Functions', content: data.important_functions },
     ]
   }
   return [
     { id: 'complexity', title: 'Complexity Analysis', content: data.complexity },
-    { id: 'calls', title: 'Call Graph', content: data.call_graph },
-    { id: 'deps', title: 'Dependency Graph', content: data.dependency_graph },
-    { id: 'security', title: 'Security Observations', content: data.security },
+    { id: 'calls', title: 'Call Graph Summary', content: data.call_graph_summary || data.call_graph },
+    { id: 'coupling', title: 'Coupling Analysis', content: data.coupling_analysis },
+    { id: 'dead-code', title: 'Dead Code Candidates', content: data.dead_code_candidates },
+    { id: 'circular', title: 'Circular Dependencies', content: data.circular_dependencies },
+    { id: 'security', title: 'Security Observations', content: data.security_observations || data.security },
   ]
 }

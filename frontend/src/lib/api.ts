@@ -92,6 +92,13 @@ export interface AnalysisLevel {
   dependency_graph: string
   complexity: string
   security: string
+  api_surface: string
+  entry_points: string[]
+  call_graph_summary: string
+  coupling_analysis: string
+  dead_code_candidates: string
+  security_observations: string
+  circular_dependencies: string
 }
 
 export interface QuestionResponse {

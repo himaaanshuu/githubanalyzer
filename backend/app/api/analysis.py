@@ -57,4 +57,11 @@ async def get_analysis_level(
         dependency_graph=level_data.get("dependency_graph", ""),
         complexity=level_data.get("complexity", ""),
         security=level_data.get("security", ""),
+        api_surface=level_data.get("api_surface", ""),
+        entry_points=level_data.get("entry_points", []),
+        call_graph_summary=level_data.get("call_graph_summary", ""),
+        coupling_analysis=level_data.get("coupling_analysis", ""),
+        dead_code_candidates=level_data.get("dead_code_candidates", ""),
+        security_observations=level_data.get("security_observations", ""),
+        circular_dependencies=level_data.get("circular_dependencies", ""),
     )
