@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-0 text-gray-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-dark-1 border border-dark-3 rounded-xl p-6;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-200 hover:border-brand-500/50 hover:shadow-lg hover:shadow-brand-500/5;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-700 text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-dark-2 hover:bg-dark-3 text-gray-200 font-medium px-6 py-3 rounded-lg transition-all duration-200 border border-dark-3 hover:border-dark-4;
+  }
+
+  .input-field {
+    @apply bg-dark-2 border border-dark-3 rounded-lg px-4 py-3 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent w-full font-mono text-sm;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-gray-100 hover:bg-dark-2 transition-colors;
+  }
+
+  .sidebar-link-active {
+    @apply sidebar-link text-brand-400 bg-brand-500/10;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .code-block {
+    @apply bg-dark-0 border border-dark-3 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+  }
+
+  .stat-card {
+    @apply bg-dark-1 border border-dark-3 rounded-xl p-4;
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold text-white;
+  }
+
+  .stat-label {
+    @apply text-sm text-gray-400 mt-1;
+  }
+
+  .tab {
+    @apply px-4 py-2 text-sm font-medium rounded-lg transition-colors;
+  }
+
+  .tab-active {
+    @apply tab bg-brand-600 text-white;
+  }
+
+  .tab-inactive {
+    @apply tab text-gray-400 hover:text-gray-200 hover:bg-dark-2;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #373a40;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #46494f;
+}
+
+/* Syntax highlighting overrides */
+pre code {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
